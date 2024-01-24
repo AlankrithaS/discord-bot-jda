@@ -22,5 +22,5 @@ A discord bot to monitor user activities for a event
 ```
 
 2. Replace `.env.example` with `.env` and add your bot token from discord developer portal.
-3. Add the token obtained from [discord developer](https://discord.com/developers) in the `.env` file for key called ```TOKEN
+3. Add the token obtained from [discord developer](https://discord.com/developers) in the `.env` file for key called `TOKEN`
 4. Run the Maven project
