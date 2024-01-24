@@ -4,10 +4,9 @@ import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-
-import java.util.ArrayList;
-
+// import java.util.ArrayList;
 import net.dv8tion.jda.api.entities.*;
+// import DbMain.
 
 public class EventListener extends ListenerAdapter {
 
@@ -29,7 +28,7 @@ public class EventListener extends ListenerAdapter {
         String msg = event.getMessage().getContentRaw();
         System.out.println(msg);
         if (msg.contains("CTF")) {
-            event.getChannel().sendMessage("pong").queue();
+            event.getChannel().sendMessage("Sharing Flags are not allowed").queue();
         }
     }
 
