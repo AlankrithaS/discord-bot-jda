@@ -3,10 +3,10 @@ package db;
 import java.sql.*;
 import java.util.UUID;
 
-class DbMain {
+public class DbConnection {
     private Statement statement;
 
-    public void generateId() {
+    public static void generateId() {
         final String uuid = UUID.randomUUID().toString().replace("-", "");
         System.out.println("uuid = " + uuid);
     }
@@ -30,6 +30,7 @@ class DbMain {
     }
 
     public void insertRecords(Connection con) {
+        System.out.println("trigger insert");
         // ArrayList<String> id = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5",
         // "6", "7", "8", "9", "10"));
         try {
@@ -106,15 +107,6 @@ class DbMain {
             e.printStackTrace();
         }
         return con;
-
-    }
-}
-
-class DbConnection {
-
-    public static void main(String args[]) {
-        DbMain db = new DbMain();
-        db.createConnection();
 
     }
 }

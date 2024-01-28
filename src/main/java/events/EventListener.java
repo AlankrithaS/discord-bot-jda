@@ -6,7 +6,11 @@ import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 // import java.util.ArrayList;
 import net.dv8tion.jda.api.entities.*;
+
+import java.sql.Connection;
+
 // import DbMain.
+import db.DbConnection;
 
 public class EventListener extends ListenerAdapter {
 
@@ -30,6 +34,9 @@ public class EventListener extends ListenerAdapter {
         if (msg.contains("CTF")) {
             event.getChannel().sendMessage("Sharing Flags are not allowed").queue();
         }
+        DbConnection db = new DbConnection();
+        Connection con = db.createConnection();
+        db.insertRecords(con);
     }
 
     @Override
@@ -37,7 +44,7 @@ public class EventListener extends ListenerAdapter {
         String avatar = event.getUser().getAsMention();
         // ArrayList<String> a = new ArrayList<String>();
         // a.add(avatar);
+
         System.out.println(avatar);
     }
-
 }
