@@ -24,3 +24,4 @@ git clone https://github.com/Punithify/discord-bot-jda.git
 2. Replace `.env.example` with `.env` .
 3. Add the token obtained from [discord developer](https://discord.com/developers) in the `.env` file for key called `TOKEN`
 4. Run the Maven project
+5. 
